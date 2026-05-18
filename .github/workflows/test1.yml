@@ -6,8 +6,12 @@ jobs:
    steps:
     - name: checkout-code
       uses: actions/checkout@v4
-    - name: print index.html file
-      run: cat index.html
+    - name: CONFIGURE aws credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+       aws-secret-key-id: ${{ secrets.AWS_SECRET_KEY }}
+       region: ap-southeast-1
  
      
    
