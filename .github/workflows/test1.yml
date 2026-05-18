@@ -1,11 +1,20 @@
 name: test-GH
 on: workflow_dispatch
 jobs:
-  test-case:
+  build:
    runs-on: ubuntu-latest
    steps:
-     - name: test-step
-       run: |
-         echo "Hello world"
-         echo "Enter second line for running"
-         echo "Enter third line for running"
+     - name: build-stage
+       run: echo "it's build stage"
+  test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: test-stage
+       run: echo "test stage it's"
+  deploy:
+   runs-on: ubuntu-latest
+   steps:
+    - name: deploy-stage
+      run: echo "test and deploy the app"
+     
+   
