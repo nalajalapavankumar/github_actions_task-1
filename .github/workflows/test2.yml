@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: running test
+       env:
+        APP_VAR: "test"
        run: echo "testing vars $APP_VAR"
