@@ -1,0 +1,16 @@
+name: input_testing
+on: 
+  workflow_dispatch:
+   inputs:
+     environment:
+      description: for choosing the nev
+      required: true
+      default: dev
+jobs: 
+    checking_input:
+     runs-on: ubuntu-latest
+     steps:
+      - name: run input test
+        run: echo "testing ${{ inputs.environment }} for value"
+    
+    
