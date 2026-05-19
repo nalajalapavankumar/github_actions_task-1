@@ -1,0 +1,10 @@
+name: 2nd day test
+on: workflow_dispatch
+var:
+ APP_VAR: "dev"
+jobs:
+  test_var:
+    runs-on: ubuntu-latest
+    steps:
+     - name: running test
+       run: echo "testing vars $APP_VAR"
