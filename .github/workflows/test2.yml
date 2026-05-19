@@ -1,6 +1,6 @@
 name: 2nd day test
 on: workflow_dispatch
-var:
+env:
  APP_VAR: "dev"
 jobs:
   test_var:
