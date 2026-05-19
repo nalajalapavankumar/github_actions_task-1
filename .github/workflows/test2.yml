@@ -4,6 +4,8 @@ env:
  APP_VAR: "dev"
 jobs:
   test_var:
+    env:
+     APP_VAR: "test"
     runs-on: ubuntu-latest
     steps:
      - name: running test
