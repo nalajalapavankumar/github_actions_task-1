@@ -6,11 +6,20 @@ on:
       description: for choosing the nev
       required: true
       default: dev
+      type: choice
+      options: 
+       - dev
+       - prod
+       - test
+       - stage
+     artifact_tag:
+       required: true
+       description: for the artifact store       
 jobs: 
     checking_input:
      runs-on: ubuntu-latest
      steps:
       - name: run input test
-        run: echo "testing ${{ inputs.environment }} for value"
+        run: echo "testing ${{ inputs.environment }} for value ${{inputs.artifact_tag}}"
     
     
