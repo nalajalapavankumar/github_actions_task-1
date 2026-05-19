@@ -10,5 +10,5 @@ jobs:
     steps:
      - name: running test
        env:
-        APP_VAR: "test"
+        APP_VAR: "prod"
        run: echo "testing vars $APP_VAR"
